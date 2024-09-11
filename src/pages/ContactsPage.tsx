@@ -67,14 +67,11 @@ const ContactsPage = () => {
         <img
           src={`https://i.pravatar.cc/150?u=${contact.id}`} // Placeholder image
           alt={contact.name}
-          className="w-32 h-32 rounded-sm object-cover"
+          className="w-32 h-32 rounded-full object-cover"
         />
         <div className="flex flex-col flex-wrap items-start text-left space-y-1.5 w-auto">
           <span className="text-lg font-medium text-gray-800">{contact.name}</span>
           <span className="text-sm text-gray-600">{contact.email}</span>
-          <span className={`text-sm ${form.status === 'active' ? 'text-green-600' : 'text-red-600'}`}>
-            {form.status === 'active' ? 'Active' : 'Inactive'}
-          </span>
         </div>
       </div>
       <div className="flex flex-col space-y-2 w-full">

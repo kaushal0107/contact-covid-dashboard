@@ -80,7 +80,7 @@ const DashboardPage = () => {
       {/* Line Chart */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <h3 className="text-2xl font-semibold text-gray-800 mb-2">Cases Over Time</h3>
-        <div className="h-80 w-full">
+        <div className="sm:h-80">
           <Line data={lineChartData} />
         </div>
       </div>
@@ -89,7 +89,7 @@ const DashboardPage = () => {
       <div className="bg-white p-4 rounded-lg shadow-md">
         <h3 className="text-2xl font-semibold text-gray-800 mb-2">COVID-19 Map</h3>
         <div className="h-96 w-full">
-          <MapContainer center={[51.505, -0.09]} zoom={2} className="h-full w-full">
+          <MapContainer center={[51.505, -0.09]} zoom={2} className="h-full w-full z-0">
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />

@@ -14,6 +14,7 @@ const Navbar = () => {
     if (isOpen) {
       setIsOpen(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]); // Remove isOpen from the dependency array
 
   // Close sidebar if clicked outside
@@ -42,8 +43,7 @@ const Navbar = () => {
       {/* Sidebar */}
       <nav 
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full bg-gray-800 p-4 space-y-6 w-64 md:relative ${isOpen ? 'block' : 'hidden md:block'}`}>
-        {/* Close Button for Mobile */}
+        className={`fixed top-0 left-0 h-full bg-gray-800 p-4 space-y-6 w-64 md:relative ${isOpen ? 'block' : 'hidden md:block'} z-50`}>        {/* Close Button for Mobile */}
         <button 
           onClick={() => setIsOpen(false)}
           className="text-white absolute top-4 right-4 md:hidden">
