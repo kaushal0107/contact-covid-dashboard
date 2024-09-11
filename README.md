@@ -24,7 +24,3 @@ This is a React-based application that allows you to manage contacts and view CO
 `npm install`
 3. Start the development server
 `npm start`
-4. Deploy via Vercel.
-
-## License
-MIT

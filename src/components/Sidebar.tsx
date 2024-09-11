@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = () => {
+const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ const Navbar = () => {
       setIsOpen(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]); // Remove isOpen from the dependency array
+  }, [location.pathname]);
 
   // Close sidebar if clicked outside
   useEffect(() => {
@@ -67,7 +67,7 @@ const Navbar = () => {
               to="/dashboard" 
               className={`block p-3 rounded-md ${isActive('/dashboard')}`}
             >
-              Dashboard
+              Charts and Maps
             </Link>
           </li>
         </ul>
@@ -76,4 +76,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Sidebar;
